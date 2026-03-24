@@ -1,73 +1,57 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Veri Tipleri Öğrenme Platformu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #4CAF50;
-            color: white;
-            animation: fadeIn 2s;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .quiz {
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .lesson {
-            margin: 20px 0;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.2);
-        }
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Duolingo-Style Learning Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Python Veri Tipleri Öğrenme Platformu</h1>
-    </header>
-    <div class="lesson">
-        <h2>Python Veri Tipleri</h2>
-        <p>Python, farklı veri tiplerini destekler. Bu platformda, değişkenler, listeler, demetler, sözlükler ve kümeler gibi temel veri tiplerini öğreneceksiniz.</p>
-        <p>Her bölümde interaktif dersler, örnek kodlar ve alıştırmalar bulacaksınız. Öğrenim sürecinizi takip edebilir ve başarılarınızı kaydedebilirsiniz.</p>
+    <div id="welcome-screen">
+        <h1>Welcome to Python Learning!</h1>
+        <div id="auth">
+            <button id="login">Login</button>
+            <button id="register">Register</button>
+        </div>
     </div>
-    <div class="quiz">
-        <h2>Quiz</h2>
-        <p>Her dersin sonunda, öğrendikleriniz hakkında bir quiz yaparak bilgilerinizi pekiştirebilirsiniz.</p>
+    <div id="course-map">
+        <h2>Course Map</h2>
+        <div class="lesson locked" data-lesson="int">Lesson 1: Integers</div>
+        <div class="lesson locked" data-lesson="float">Lesson 2: Floats</div>
+        <div class="lesson locked" data-lesson="str">Lesson 3: Strings</div>
+        <div class="lesson locked" data-lesson="bool">Lesson 4: Booleans</div>
+        <div class="lesson locked" data-lesson="list">Lesson 5: Lists</div>
     </div>
-    <div class="management">
-        <h2>Öğrenci Yönetimi</h2>
-        <p>Öğrenci kayıtları, ilerleme izleme ve başarı durumları için yönetim paneline erişim sağlayabilirsiniz.</p>
+    <div id="xp-tracking">
+        <h2>XP System</h2>
+        <p>Current XP: <span id="current-xp">0</span></p>
+        <p>Current Streak: <span id="current-streak">0</span> days</p>
     </div>
+    <div id="lesson-slides">
+        <h2>Lesson Slides</h2>
+        <div id="slides-content"></div>
+        <button id="next-slide">Next Slide</button>
+    </div>
+    <div id="result-screen">
+        <h2>Results</h2>
+        <p>Stars: <span id="stars-earned">0</span></p>
+        <p>XP Earned: <span id="xp-earned">0</span></p>
+    </div>
+
     <script>
-        // JavaScript code for interactivity can be added here
+        // Simulate real-time progress syncing to JSONBin API
+        function syncProgress(progressData) {
+            fetch('https://api.jsonbin.io/v3/b/yourjsonbinid', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(progressData)
+            }).then(response => {
+                if (response.ok) {
+                    console.log('Progress synced successfully');
+                }
+            });
+        }
     </script>
 </body>
 </html>
