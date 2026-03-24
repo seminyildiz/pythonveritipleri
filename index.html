@@ -1,41 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Data Types Learning Platform</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Python Veri Tipleri Öğrenme Platformu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #4CAF50;
+            color: white;
+            animation: fadeIn 2s;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .quiz {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .lesson {
+            margin: 20px 0;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Learn Python Data Types</h1>
-        <nav>
-            <ul>
-                <li><a href="#lessons">Lessons</a></li>
-                <li><a href="#quizzes">Quizzes</a></li>
-                <li><a href="#progress">Progress Tracking</a></li>
-            </ul>
-        </nav>
+        <h1>Python Veri Tipleri Öğrenme Platformu</h1>
     </header>
-    <main>
-        <section id="lessons">
-            <h2>Interactive Lessons</h2>
-            <p>Explore various Python data types through interactive lessons.</p>
-            <!-- Lesson content goes here -->
-        </section>
-        <section id="quizzes">
-            <h2>Quizzes</h2>
-            <p>Test your knowledge with our quizzes!</p>
-            <!-- Quiz content goes here -->
-        </section>
-        <section id="progress">
-            <h2>Progress Tracking</h2>
-            <p>Track your learning progress over time.</p>
-            <!-- Progress tracking content goes here -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Python Data Types Learning Platform</p>
-    </footer>
+    <div class="lesson">
+        <h2>Python Veri Tipleri</h2>
+        <p>Python, farklı veri tiplerini destekler. Bu platformda, değişkenler, listeler, demetler, sözlükler ve kümeler gibi temel veri tiplerini öğreneceksiniz.</p>
+        <p>Her bölümde interaktif dersler, örnek kodlar ve alıştırmalar bulacaksınız. Öğrenim sürecinizi takip edebilir ve başarılarınızı kaydedebilirsiniz.</p>
+    </div>
+    <div class="quiz">
+        <h2>Quiz</h2>
+        <p>Her dersin sonunda, öğrendikleriniz hakkında bir quiz yaparak bilgilerinizi pekiştirebilirsiniz.</p>
+    </div>
+    <div class="management">
+        <h2>Öğrenci Yönetimi</h2>
+        <p>Öğrenci kayıtları, ilerleme izleme ve başarı durumları için yönetim paneline erişim sağlayabilirsiniz.</p>
+    </div>
+    <script>
+        // JavaScript code for interactivity can be added here
+    </script>
 </body>
 </html>
